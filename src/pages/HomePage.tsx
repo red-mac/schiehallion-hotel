@@ -75,15 +75,16 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/highlands/dramatic-loch.webp"
-          alt="Dramatic Scottish Highlands landscape with loch and mountains"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/highlands/dramatic-loch.webp"
           className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1080}
-          loading="eager"
-          fetchPriority="high"
-        />
+        >
+          <source src="/images/highlands/Stunning_panoramic_view_1080p_202601281118.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-highland-green/60 via-highland-green/40 to-highland-green/70" />
         
         <motion.div
