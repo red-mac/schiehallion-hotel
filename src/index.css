@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* Scottish Highlands Color Theme */
+@theme {
+  --color-highland-green: #1a3c34;
+  --color-highland-green-light: #2a5c4a;
+  --color-amber: #d4a853;
+  --color-amber-light: #e4c483;
+  --color-heather: #7b5e7b;
+  --color-heather-light: #9b7e9b;
+  --color-cream: #f5f2eb;
+  --color-cream-dark: #e5e2db;
+  --color-charcoal: #2d2d2d;
+  --color-charcoal-light: #4d4d4d;
+  
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-highland-green);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-highland-green);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-highland-green-light);
+}
+
+/* Date picker custom styles */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: var(--color-highland-green);
+  --rdp-background-color: var(--color-highland-green-light);
+  margin: 0;
+}
+
+.rdp-day_selected {
+  background-color: var(--color-highland-green) !important;
+}
